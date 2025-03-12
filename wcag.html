@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์รองรับคนพิการ</title>
+  <style>
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #0056b3;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007bff;
+      margin: 10px;
+      font-size: 18px;
+    }
+    nav a:focus, nav a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+    .content {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 3px solid #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>เว็บไซต์รองรับคนพิการ</h1>
+</header>
+
+<nav>
+  <a href="#home" id="homeLink" aria-label="ไปยังหน้าแรก">หน้าแรก</a>
+  <a href="#news" id="newsLink" aria-label="ไปยังข่าวประชาสัมพันธ์">ข่าวประชาสัมพันธ์</a>
+  <a href="#contact" id="contactLink" aria-label="ไปยังติดต่อเรา">ติดต่อเรา</a>
+</nav>
+
+<div class="content" id="home">
+  <h2>หน้าแรก</h2>
+  <p>ยินดีต้อนรับสู่เว็บไซต์ที่รองรับผู้พิการทางสายตาและผู้ใช้งานที่ต้องการการเข้าถึงพิเศษ!</p>
+</div>
+
+<div class="content" id="news" style="display:none;">
+  <h2>ข่าวประชาสัมพันธ์</h2>
+  <p>ข่าวสารล่าสุดที่สำคัญจะถูกแสดงที่นี่สำหรับผู้เยี่ยมชม.</p>
+</div>
+
+<div class="content" id="contact" style="display:none;">
+  <h2>ติดต่อเรา</h2>
+  <p>หากคุณต้องการติดต่อเรา, กรุณากรอกข้อมูลที่ด้านล่าง:</p>
+  <form>
+    <label for="name">ชื่อ:</label><br>
+    <input type="text" id="name" name="name" aria-label="กรอกชื่อของคุณ"><br><br>
+    <label for="email">อีเมล:</label><br>
+    <input type="email" id="email" name="email" aria-label="กรอกอีเมลของคุณ"><br><br>
+    <button type="submit">ส่ง</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 เว็บไซต์รองรับคนพิการ</p>
+</footer>
+
+<script>
+  // Script สำหรับการสลับเนื้อหาของแต่ละหน้า
+  const homeLink = document.getElementById('homeLink');
+  const newsLink = document.getElementById('newsLink');
+  const contactLink = document.getElementById('contactLink');
+
+  const homeContent = document.getElementById('home');
+  const newsContent = document.getElementById('news');
+  const contactContent = document.getElementById('contact');
+
+  homeLink.addEventListener('click', () => {
+    homeContent.style.display = 'block';
+    newsContent.style.display = 'none';
+    contactContent.style.display = 'none';
+  });
+
+  newsLink.addEventListener('click', () => {
+    homeContent.style.display = 'none';
+    newsContent.style.display = 'block';
+    contactContent.style.display = 'none';
+  });
+
+  contactLink.addEventListener('click', () => {
+    homeContent.style.display = 'none';
+    newsContent.style.display = 'none';
+    contactContent.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

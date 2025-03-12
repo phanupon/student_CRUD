@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์ Creation Pro มาตรฐาน WCAG2.2 </title>
+  <style>
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #0056b3;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007bff;
+      margin: 10px;
+      font-size: 18px;
+    }
+    nav a:focus, nav a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+    .content {
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #000;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>เว็บไซต์ ครีเอชั่นโปร มาตรฐาน WCAG 2.2</h1>
+</header>
+
+<!-- เมนูนำทาง -->
+<nav>
+  <a href="#home" id="homeLink" aria-label="ไปยังหน้าแรก">หน้าแรก</a>
+  <a href="#news" id="newsLink" aria-label="ไปยังข่าวประชาสัมพันธ์">ข่าวประชาสัมพันธ์</a>
+  <a href="#contact" id="contactLink" aria-label="ไปยังติดต่อเรา">ติดต่อเรา</a>
+  <a href="#map" id="mapLink" aria-label="ไปยังแผนที่ติดต่อเรา">แผนที่ติดต่อเรา</a>
+  <label for="fontSizeSelect">เลือกขนาดตัวอักษร:</label>
+  <select id="fontSizeSelect">
+    <option value="14">เล็ก</option>
+    <option value="16" selected>ปกติ</option>
+    <option value="18">ใหญ่</option>
+    <option value="20">ใหญ่พิเศษ</option>
+  </select>
+</nav>
+<!-- หน้าแรก -->
+<div class="content" id="home">
+  <h2>หน้าแรก</h2>
+  <p id="textContent">ยินดีต้อนรับสู่เว็บไซต์ที่รองรับผู้พิการทางสายตาและผู้ใช้งานที่ต้องการการเข้าถึงพิเศษ!</p>
+</div>
+
+
+<!-- ข่าวประชาสัมพันธ์ -->
+<div class="content" id="news" style="display:none;">
+    <h2>ข่าวประชาสัมพันธ์: งานกีฬาสี</h2>
+    
+    <!-- รูปภาพ -->
+    <img src="sports-event.jpg" alt="ภาพจากงานกีฬาสี โรงเรียน ABC" aria-describedby="caption">
+    <p id="caption" id="textContent">ภาพ: นักเรียนเข้าร่วมการแข่งขันกีฬาสีประจำปีที่โรงเรียน ABC</p>
+    
+    <h3>ตารางการแข่งกีฬา</h3>
+    
+    <!-- ตาราง -->
+    <table>
+      <caption>ตารางการแข่งขันกีฬาสีประจำปี</caption>
+      <thead>
+        <tr>
+          <th>วัน</th>
+          <th>เวลา</th>
+          <th>ประเภทกีฬา</th>
+          <th>สถานที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>วันที่ 1 เมษายน</td>
+          <td>09:00 น.</td>
+          <td>วิ่ง 100 เมตร</td>
+          <td>สนามกีฬาโรงเรียน</td>
+        </tr>
+        <tr>
+          <td>วันที่ 1 เมษายน</td>
+          <td>10:30 น.</td>
+          <td>ขว้างจักร</td>
+          <td>สนามกีฬาโรงเรียน</td>
+        </tr>
+        <tr>
+          <td>วันที่ 2 เมษายน</td>
+          <td>14:00 น.</td>
+          <td>ฟุตบอล</td>
+          <td>สนามฟุตบอลโรงเรียน</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p id="textContent">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับงานกีฬาสี, โปรดติดต่อเจ้าหน้าที่ที่เกี่ยวข้อง.</p>
+  </div>
+
+<!-- ติดต่อเรา -->
+<div class="content" id="contact" style="display:none;">
+  <h2>ติดต่อเรา</h2>
+  <p id="textContent">หากคุณต้องการติดต่อเรา, กรุณากรอกข้อมูลที่ด้านล่าง:</p>
+  <form>
+    <label for="name">ชื่อ:</label><br>
+    <input type="text" id="name" name="name" aria-label="กรอกชื่อของคุณ"><br><br>
+    <label for="email">อีเมล:</label><br>
+    <input type="email" id="email" name="email" aria-label="กรอกอีเมลของคุณ"><br><br>
+    <button type="submit">ส่ง</button>
+  </form>
+</div>
+
+<!-- แผนที่ติดต่อเรา -->
+<div class="content" id="map" style="display:none;">
+  <h2>แผนที่ติดต่อเรา</h2>
+  <p id="textContent">ที่ตั้งสำนักงานของเรา:</p>
+  
+  <!-- ฝัง Google Maps -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.486266872687!2d100.51305401538441!3d13.764877490340926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ed29b4a28c9%3A0x5d92f8b5cf6d95d6!2z4LiB4LiC4LiV4Lit4LiB4Liy4LijIOC4geC4quC4peC4nuC4h-C4quC5gOC4l-C4oSDguIrguLLguIHguLHguJXguKLguKIg4LiY4Liy4Lil4Liw4LiX4LiV4LmA4LiI4LmJ!5e0!3m2!1sth!2sth!4v1648709874532!5m2!1sth!2sth" 
+    allowfullscreen 
+    loading="lazy" 
+    aria-label="แผนที่ที่ตั้งของเรา">
+  </iframe>
+</div>
+
+<footer>
+  <p>&copy; 2025 เว็บไซต์ ครีเอชั่นโปร รองรับคนพิการ มาตรฐาน WCAG 2.2 </p>
+</footer>
+
+<script>
+  // Script สำหรับการสลับเนื้อหาของแต่ละหน้า
+  const homeLink = document.getElementById('homeLink');
+  const newsLink = document.getElementById('newsLink');
+  const contactLink = document.getElementById('contactLink');
+  const mapLink = document.getElementById('mapLink');
+
+  const homeContent = document.getElementById('home');
+  const newsContent = document.getElementById('news');
+  const contactContent = document.getElementById('contact');
+  const mapContent = document.getElementById('map');
+
+  homeLink.addEventListener('click', () => {
+    homeContent.style.display = 'block';
+    newsContent.style.display = 'none';
+    contactContent.style.display = 'none';
+    mapContent.style.display = 'none';
+  });
+
+  newsLink.addEventListener('click', () => {
+    homeContent.style.display = 'none';
+    newsContent.style.display = 'block';
+    contactContent.style.display = 'none';
+    mapContent.style.display = 'none';
+  });
+
+  contactLink.addEventListener('click', () => {
+    homeContent.style.display = 'none';
+    newsContent.style.display = 'none';
+    contactContent.style.display = 'block';
+    mapContent.style.display = 'none';
+  });
+
+  mapLink.addEventListener('click', () => {
+    homeContent.style.display = 'none';
+    newsContent.style.display = 'none';
+    contactContent.style.display = 'none';
+    mapContent.style.display = 'block';
+  });
+</script>
+
+<script>
+    const fontSizeSelect = document.getElementById("fontSizeSelect");
+    const textContent = document.getElementById("textContent");
+  
+    fontSizeSelect.addEventListener("change", function() {
+      const selectedSize = fontSizeSelect.value;
+      textContent.style.fontSize = `${selectedSize}px`;
+    });
+  </script>
+</body>
+</html>
